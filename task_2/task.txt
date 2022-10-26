@@ -1,0 +1,13 @@
+Zadanie: napisać moduł do postawienia web apki
+
+W pliku resources.tf znajduje się już przykładowe wykorzystanie modułu jaki jest do napisania.
+Na tej podstawie można wydedukować, jakie variable będzie trzeba zdefiniować.
+W pliku main.tf w module web_app znajdują się wszystkie resource jakie należy użyć - oczywiście trzeba uzupełnić atrybuty.
+Moduł powinien mieć output, w którym przekazane zostanie id stworzonego azurerm_windows_web_app.
+
+Drobny hint: nazwa web_app musi być unikalna >globalnie<, więc polecam np wrzucić tam swój login domenowy, albo jakiś losowy ciąg znaków.
+
+Walidacja: jeśli moduł jest napisany poprawnie, kod powinien zadziałać bez żadnych modyfikacji w plike resources.tf + stworzą się resource zdefiniowane w module
+
+Jeśli starczy czasu:
+Dodać jeszcze 2 web apki, ale z użyciem for_each (żeby oszczędzić czas - nie robimy destroy na starych resourcach, robimy nowy moduł i na nim for_each)

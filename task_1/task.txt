@@ -1,0 +1,7 @@
+Zadanie: chcemy wygenerować 5 nsg rule używając for_each
+
+W samym azurerm_network_security_rule oraz localsach podpowiedzi jak ma wyglądać source dla for_eacha
+
+Walidacja: wchodzimy na portal, resource grupa -> network security group i patrzymy czy dodały się nasze reguły
+
+Jeśli wszystko wygląda ok w portalu, robimy terraform destroy (ważne pod kątem następnego kroku)
